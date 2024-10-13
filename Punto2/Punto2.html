@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TP - Repaso</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+    </head>
+    <link rel="stylesheet" href="Punto2.css">
+    <body>
+        <div class="menu">
+            <div class="texto-menu">
+                <h1>Formulario</h1>
+            </div>
+
+        <script>
+            function Supervisar() {
+                var nombre = document.getElementById('name');
+                var apellido = document.getElementById('surname');
+                var fecha = document.getElementById('date');
+                var celular = document.getElementById('tel');
+                if (nombre.value === null || nombre.value === ''){
+                    alert("Ingrese su nombre");
+                }
+                if (apellido.value === null || apellido.value === ''){
+                    alert("Ingrese su apellido");
+                }
+                if (fecha.value === null || fecha.value === ''){
+                    alert("Ingrese su fecha de nacimiento");
+                }
+                if (celular.value === null || celular.value === ''){
+                    alert("Ingrese su número celular");
+                }
+            }
+        </script>
+            <div class="fondos-menu">
+                <form action="submission.html" method="POST">
+
+                    <label for="name">Ingrese su nombre</label>
+                    <input id="name" name="name" type="text" required minlength="0" maxlength="30" required>
+
+                    <label for="surname">Ingrese su apellido</label>
+                    <input id="surname" name="surname" type="text" required minlength="0" maxlength="30" required>
+
+                    <label for="date">Ingrese su fecha de nacimiento:</label> 
+                    <input  type="date" id="date" name="date">
+
+                    <label for="tel">Ingrese su número celular:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="Ej: 1159611871">
+                
+                    <button type="submit" onclick=Supervisar();>Iniciar Sesión</button>
+                </form>   
+            </div>
+        </div>
+    </body>
+</html>
